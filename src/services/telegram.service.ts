@@ -84,10 +84,9 @@ ${task.isAdminTask ? '👑 <b>Admin Task</b>' : ''}${fileSection}
 
 🔗 <b>Quick Links:</b>
 • View Task: ${APP_DOMAIN}
-• Task Category: ${APP_DOMAIN}/?category=${task.category}
 
-#NestTask #${task.category} ${task.isAdminTask ? '#AdminTask' : ''} #Task
-${task.isAdminTask ? '⚡️ This is a priority task from admin!' : ''}`;
+#NestTask #${task.category} ${task.isAdminTask ? '' : ''} #Task
+${task.isAdminTask ? '⚡️ Stay updated with NestTask!' : ''}`;
 
   return sendTelegramMessage(message, imageUrl);
 }
@@ -106,7 +105,6 @@ ${announcement.content.length > 200
 
 🔗 <b>Quick Links:</b>
 • View Details: ${APP_DOMAIN}
-• Announcements: ${APP_DOMAIN}/?tab=announcements
 
 #NestTask #Announcement #Update
 ⚡️ Stay updated with NestTask!`;
